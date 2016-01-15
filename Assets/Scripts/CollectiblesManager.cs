@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class CollectiblesManager : MonoBehaviour
 {
-    Animator basedoor;
+//    Animator basedoor;
     public Text countText;
     public Text timerText;
     private int count;
@@ -21,10 +21,10 @@ public class CollectiblesManager : MonoBehaviour
         GameObject[] collectables = GameObject.FindGameObjectsWithTag("Collectable");
         nrOfTotalCollectables = collectables.Length;
         nrOfCollectedItems = 0;
-        Debug.Log(nrOfTotalCollectables);
+//        Debug.Log(nrOfTotalCollectables);
         count = 0;
         UpdateUI();
-        basedoor = GetComponent<Animator>();
+//        basedoor = GetComponent<Animator>();
     }
     void Update() 
     {
@@ -37,12 +37,18 @@ public class CollectiblesManager : MonoBehaviour
         {
             //insertDeathThingy
             Debug.Log("heeyoo you died");
+			Application.LoadLevel("LoseScene");
         }
-        if (count == 1)
+        if (count >= 1)
         {
             StartCountdown = true;
             timerText.text = "Time Left: " + theTimer.ToString();
         }
+
+		if (count == 4)
+		{
+			Application.LoadLevel("WinScene");
+		}
     }
     public void AddCollectable()
     {
@@ -63,7 +69,7 @@ public class CollectiblesManager : MonoBehaviour
     {
         if (count == nrOfTotalCollectables)
             {
-                basedoor.Play("up");
+//                basedoor.Play("up");
                 yield return new WaitForSeconds(3);
                
             }

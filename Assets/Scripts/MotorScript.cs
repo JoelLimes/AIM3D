@@ -34,8 +34,8 @@ public class MotorScript : MonoBehaviour
 		if (torque != 0) {
 
 			//front wheel drive  Select kind of drive
-			wheel[0].Move (torque);
-			wheel[1].Move (torque);
+//			wheel[0].Move (torque);
+//			wheel[1].Move (torque);
 
 			//rear wheel drive
 			wheel[2].Move(torque);

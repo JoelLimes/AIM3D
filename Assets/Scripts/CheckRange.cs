@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CheckRange : MonoBehaviour {
+public class CheckRange : MonoBehaviour 
+{
+
+//	DEAD CODE !!! 
+
 	[SerializeField]private GameObject _player;
 	private float _maxDistance = 25.0f;
 	private float _currentTime;
@@ -38,6 +42,7 @@ public class CheckRange : MonoBehaviour {
 
 		Debug.Log ("is catched");
 		StopCoroutine ("CheckIfInRange");
+		Application.LoadLevel ("LoseScene");
 
 	}
 }
