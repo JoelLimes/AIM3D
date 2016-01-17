@@ -17,7 +17,7 @@ public class PlayerDeath : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.tag == "Player")
-			Debug.Log ("player has touched gun");
+			Debug.Log ("You've been Touch by.... SmoothPoliceMan");
 		Destroy (this.gameObject);
 		Application.LoadLevel ("LoseScene");
 	}

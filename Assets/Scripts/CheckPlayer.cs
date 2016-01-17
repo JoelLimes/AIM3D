@@ -35,7 +35,7 @@ public class CheckPlayer : MonoBehaviour {
         Collider[] colliders = Physics.OverlapSphere(transform.position, _targetingRadius, layerMask);
         int length = colliders.Length;
 
-        Debug.Log(length);
+//        Debug.Log(length);
         for (int i = 0; i < length; i++ )
         {
            

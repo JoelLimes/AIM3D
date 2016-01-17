@@ -45,7 +45,7 @@ public class CollectiblesManager : MonoBehaviour
             timerText.text = "Time Left: " + theTimer.ToString();
         }
 
-		if (count == 4)
+		if (count >= 7)
 		{
 			Application.LoadLevel("WinScene");
 		}

@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
 
 	void OnTriggerExit(Collider other)
 	{
-		Debug.Log ("is er contact ??");
 		if (other.transform.tag == "Collectable")
 		{
 			Destroy(other.gameObject);
